@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Pathways Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #8b7355;
+            --light: #f4f1ea;
+            --text: #3a3a3a;
+            --border: #d4c4b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #f4f1ea 0%, #e8dfd0 100%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 700px;
+            background: white;
+            padding: 4rem 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            border: 1px solid var(--border);
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .pathways-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pathway-badge {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            color: var(--accent);
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2.5rem 2rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .pathways-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sacred Pathways</h1>
+        <div class="subtitle">Discovering Your Spiritual Temperament</div>
+        
+        <p>How do you draw closest to God? Through quiet contemplation, active service, intellectual study, or celebration? Each person connects with God in unique ways.</p>
+        
+        <p>This assessment will help you identify your spiritual temperament among nine sacred pathways. By understanding how you naturally connect with God, you can develop practices that nurture your faith and deepen your relationship with the Divine.</p>
+
+        <div class="pathways-grid">
+            <div class="pathway-badge">Naturalist</div>
+            <div class="pathway-badge">Sensate</div>
+            <div class="pathway-badge">Traditionalist</div>
+            <div class="pathway-badge">Ascetic</div>
+            <div class="pathway-badge">Activist</div>
+            <div class="pathway-badge">Caregiver</div>
+            <div class="pathway-badge">Enthusiast</div>
+            <div class="pathway-badge">Contemplative</div>
+            <div class="pathway-badge">Intellectual</div>
+        </div>
+
+        <p>The assessment contains 54 questions. For each statement, rate how true it is for you on a scale from 1 to 5, where 1 means "Not true at all" and 5 means "Very true." We encourage you to avoid using 3 - push yourself toward a 2 or 4 to get clearer results.</p>
+
+        <p>Take your time and answer honestly. There are no right or wrong answers, only your authentic responses.</p>
+
+        <button class="cta-button" onclick="window.location.href='quiz.html'">Begin Assessment</button>
+    </div>
+</body>
+</html>
